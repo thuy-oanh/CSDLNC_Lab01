@@ -7,6 +7,64 @@ from pathlib import Path
 # from src.metadata_engine import validate_and_extract_metadata, build_final_metadata
 # from src.storage_engine import save_image_local
 
+# Hàm cập nhật chỉ mục (Mở rộng E)
+INDEX_FILE = "metadata_index.json"
+
+def update_metadata_index(file_id, file_name, json_path):
+    """Mở rộng E: Lưu chỉ mục metadata."""
+    index_path = Path.cwd() / INDEX_FILE
+    index_data = []
+    
+    if index_path.exists():
+        try:
+            with open(index_path, 'r', encoding='utf-8') as f:
+                index_data = json.load(f)
+        except json.JSONDecodeError:
+            pass # Bỏ qua nếu file đang lỗi hoặc trống
+            
+    # Nối thêm thông tin ảnh mới vào danh sách
+    index_data.append({
+        "file_id": file_id,
+        "file_name": file_name,
+        "metadata_path": str(json_path)
+    })
+    
+    with open(index_path, 'w', encoding='utf-8') as f:
+        json.dump(index_data, f, ensure_ascii=False, indent=4)
+
+# Hàm tìm kiếm ảnh (Mở rộng C)
+def search_images(keyword):
+    """Mở rộng C: Tìm kiếm ảnh theo từ khóa."""
+    index_path = Path.cwd() / INDEX_FILE
+    if not index_path.exists():
+        print("Chưa có cơ sở dữ liệu chỉ mục để tìm kiếm.")
+        return
+
+    with open(index_path, 'r', encoding='utf-8') as f:
+        index_data = json.load(f)
+
+    print(f"\n--- KẾT QUẢ TÌM KIẾM CHO: '{keyword}' ---")
+    keyword = keyword.lower()
+    found = False
+
+    for entry in index_data:
+        meta_path = Path(entry["metadata_path"])
+        if meta_path.exists():
+            with open(meta_path, 'r', encoding='utf-8') as mf:
+                meta = json.load(mf)
+            
+            # Gom các trường cần tìm kiếm thành một chuỗi duy nhất để kiểm tra
+            tags_str = " ".join(meta.get('tags', []))
+            search_text = f"{meta.get('file_id', '')} {meta.get('file_name', '')} {meta.get('caption', '')} {tags_str} {meta.get('mime_type', '')}".lower()
+            
+            if keyword in search_text:
+                print(f"- File ID: {meta.get('file_id')}")
+                print(f"  Data URL: {meta.get('data_url')}\n")
+                found = True
+                
+    if not found:
+        print("Không có kết quả phù hợp.")
+
 def process_single_image(file_path, args):
     """Hàm xử lý một file ảnh đơn lẻ, ráp nối các module."""
     path_obj = Path(file_path)
@@ -61,6 +119,8 @@ def process_single_image(file_path, args):
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(final_metadata, f, ensure_ascii=False, indent=4)
 
+    update_metadata_index(file_id, path_obj.name, json_path)
+
     # In log theo yêu cầu bắt buộc (file_id, path, data_url, json_path)
     print(f"\n[THÀNH CÔNG] Xử lý xong: {path_obj.name}")
     print(f" - File ID: {file_id}")
@@ -72,12 +132,27 @@ def process_single_image(file_path, args):
 
 def main():
     parser = argparse.ArgumentParser(description="EduHub Image Ingestion System")
-    parser.add_argument("input_path", help="Đường dẫn đến 1 file ảnh hoặc 1 thư mục chứa ảnh")
+    # Thêm nargs='?' để input_path không bắt buộc khi dùng lệnh search
+    parser.add_argument("input_path", nargs='?', help="Đường dẫn đến 1 file ảnh hoặc 1 thư mục chứa ảnh")
     parser.add_argument("-d", "--description", type=str, default="Không có mô tả", help="Mô tả ảnh")
     parser.add_argument("-c", "--caption", type=str, default="Không có chú thích", help="Chú thích ảnh")
     parser.add_argument("-t", "--tags", type=str, default="", help="Các thẻ tag, cách nhau bởi dấu phẩy")
-    
+
+    # Mở rộng C: Thêm tham số tìm kiếm
+    parser.add_argument("-s", "--search", type=str, help="Tìm kiếm ảnh theo từ khóa") 
+
     args = parser.parse_args()
+
+    # Nếu người dùng chạy lệnh tìm kiếm, thực thi hàm và kết thúc luôn
+    if args.search:
+        search_images(args.search)
+        sys.exit(0)
+
+    # Chặn lỗi nếu không nhập thư mục và cũng không tìm kiếm
+    if not args.input_path:
+        print("Lỗi: Vui lòng cung cấp đường dẫn ảnh/thư mục.")
+        sys.exit(1)
+
     input_path = Path(args.input_path)
 
     success_count = 0
