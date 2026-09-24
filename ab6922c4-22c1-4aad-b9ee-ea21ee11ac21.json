@@ -1,0 +1,23 @@
+{
+    "file_id": "ab6922c4-22c1-4aad-b9ee-ea21ee11ac21",
+    "file_name": "slide_bai_hoc.png",
+    "description": "Không có mô tả",
+    "caption": "Không có chú thích",
+    "author": "Nguyen Le Thuy Oanh",
+    "size": 46868,
+    "extension": ".png",
+    "mime_type": "image/png",
+    "width": 578,
+    "height": 847,
+    "created_at": "2026-09-24T21:20:14.325527+07:00",
+    "checksum_algorithm": "sha256",
+    "checksum": "d5564c5758bb7a9f1a508b7e241ae36e51317c1d6646f6e62316dce8caa6f19c",
+    "tags": [
+        "lab01",
+        "eduhub",
+        "ca_nhan"
+    ],
+    "path": "data\\ab6922c4-22c1-4aad-b9ee-ea21ee11ac21.png",
+    "data_url": "file://D:\\CSDLNC_Lab01\\data\\ab6922c4-22c1-4aad-b9ee-ea21ee11ac21.png",
+    "storage_type": "local"
+}
