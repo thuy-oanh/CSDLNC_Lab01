@@ -1,0 +1,23 @@
+{
+    "file_id": "750901cc-ddfb-43dd-9743-1c437f697d93",
+    "file_name": "anh_the.jpg",
+    "description": "Không có mô tả",
+    "caption": "Không có chú thích",
+    "author": "Nguyen Le Thuy Oanh",
+    "size": 28323,
+    "extension": ".jpg",
+    "mime_type": "image/jpeg",
+    "width": 474,
+    "height": 592,
+    "created_at": "2026-09-24T21:20:14.122509+07:00",
+    "checksum_algorithm": "sha256",
+    "checksum": "b17e44dd15c15a9a7235d820896ab1fd015d1d1dd968f93eb01dd54307ff0374",
+    "tags": [
+        "lab01",
+        "eduhub",
+        "ca_nhan"
+    ],
+    "path": "data\\750901cc-ddfb-43dd-9743-1c437f697d93.jpg",
+    "data_url": "file://D:\\CSDLNC_Lab01\\data\\750901cc-ddfb-43dd-9743-1c437f697d93.jpg",
+    "storage_type": "local"
+}
