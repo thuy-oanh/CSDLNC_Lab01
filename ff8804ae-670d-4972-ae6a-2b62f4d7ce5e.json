@@ -1,0 +1,23 @@
+{
+    "file_id": "ff8804ae-670d-4972-ae6a-2b62f4d7ce5e",
+    "file_name": "anh_the.jpg",
+    "description": "Anh the sinh vien",
+    "caption": "Anh chan dung",
+    "author": "Nguyen Le Thuy Oanh",
+    "size": 28323,
+    "extension": ".jpg",
+    "mime_type": "image/jpeg",
+    "width": 474,
+    "height": 592,
+    "created_at": "2026-09-24T15:38:20.963220+07:00",
+    "checksum_algorithm": "sha256",
+    "checksum": "b17e44dd15c15a9a7235d820896ab1fd015d1d1dd968f93eb01dd54307ff0374",
+    "tags": [
+        "lab01",
+        "eduhub",
+        "ca_nhan"
+    ],
+    "path": "data\\ff8804ae-670d-4972-ae6a-2b62f4d7ce5e.jpg",
+    "data_url": "file://D:\\CSDLNC_Lab01\\data\\ff8804ae-670d-4972-ae6a-2b62f4d7ce5e.jpg",
+    "storage_type": "local"
+}
