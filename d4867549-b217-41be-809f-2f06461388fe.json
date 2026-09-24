@@ -1,0 +1,23 @@
+{
+    "file_id": "d4867549-b217-41be-809f-2f06461388fe",
+    "file_name": "hoc_lieu.jpg",
+    "description": "Test trung ten goc",
+    "caption": "Anh trung ten",
+    "author": "Nguyen Le Thuy Oanh",
+    "size": 28323,
+    "extension": ".jpg",
+    "mime_type": "image/jpeg",
+    "width": 474,
+    "height": 592,
+    "created_at": "2026-09-24T21:11:57.000977+07:00",
+    "checksum_algorithm": "sha256",
+    "checksum": "b17e44dd15c15a9a7235d820896ab1fd015d1d1dd968f93eb01dd54307ff0374",
+    "tags": [
+        "lab01",
+        "eduhub",
+        "ca_nhan"
+    ],
+    "path": "data\\d4867549-b217-41be-809f-2f06461388fe.jpg",
+    "data_url": "file://D:\\CSDLNC_Lab01\\data\\d4867549-b217-41be-809f-2f06461388fe.jpg",
+    "storage_type": "local"
+}

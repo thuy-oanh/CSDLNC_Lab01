@@ -1,6 +1,8 @@
 import argparse
 import json
 import sys
+
+sys.stdout.reconfigure(encoding='utf-8')
 from pathlib import Path
 
 from src.metadata_engine import generate_metadata
