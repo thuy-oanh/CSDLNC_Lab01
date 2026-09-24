@@ -1,0 +1,23 @@
+{
+    "file_id": "96e9af58-b222-4604-a8e5-f7611b0da046",
+    "file_name": "ban_hoc.jpg",
+    "description": "Không có mô tả",
+    "caption": "Không có chú thích",
+    "author": "Nguyen Le Thuy Oanh",
+    "size": 326671,
+    "extension": ".jpg",
+    "mime_type": "image/jpeg",
+    "width": 960,
+    "height": 1280,
+    "created_at": "2026-09-24T15:39:07.844627+07:00",
+    "checksum_algorithm": "sha256",
+    "checksum": "a93d306e2fd7b5252a366a658b32c1f9b1e3711927a956bdb7126572c1ba0003",
+    "tags": [
+        "lab01",
+        "eduhub",
+        "ca_nhan"
+    ],
+    "path": "data\\96e9af58-b222-4604-a8e5-f7611b0da046.jpg",
+    "data_url": "file://D:\\CSDLNC_Lab01\\data\\96e9af58-b222-4604-a8e5-f7611b0da046.jpg",
+    "storage_type": "local"
+}

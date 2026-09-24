@@ -1,0 +1,23 @@
+{
+    "file_id": "3999a931-5ad4-4872-a294-b0b778163fca",
+    "file_name": "nhom_hoc.jpg",
+    "description": "Không có mô tả",
+    "caption": "Không có chú thích",
+    "author": "Nguyen Le Thuy Oanh",
+    "size": 552337,
+    "extension": ".jpg",
+    "mime_type": "image/jpeg",
+    "width": 2560,
+    "height": 1920,
+    "created_at": "2026-09-24T15:39:08.062730+07:00",
+    "checksum_algorithm": "sha256",
+    "checksum": "e4876be2f36953eaa274ef1e4a599c93ef8f8be69b7c1a62d284b64d87b12818",
+    "tags": [
+        "lab01",
+        "eduhub",
+        "ca_nhan"
+    ],
+    "path": "data\\3999a931-5ad4-4872-a294-b0b778163fca.jpg",
+    "data_url": "file://D:\\CSDLNC_Lab01\\data\\3999a931-5ad4-4872-a294-b0b778163fca.jpg",
+    "storage_type": "local"
+}

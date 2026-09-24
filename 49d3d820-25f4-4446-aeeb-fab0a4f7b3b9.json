@@ -1,0 +1,23 @@
+{
+    "file_id": "49d3d820-25f4-4446-aeeb-fab0a4f7b3b9",
+    "file_name": "trang_vo_ghi.png",
+    "description": "Không có mô tả",
+    "caption": "Không có chú thích",
+    "author": "Nguyen Le Thuy Oanh",
+    "size": 3710370,
+    "extension": ".png",
+    "mime_type": "image/png",
+    "width": 1920,
+    "height": 2560,
+    "created_at": "2026-09-24T15:39:08.225996+07:00",
+    "checksum_algorithm": "sha256",
+    "checksum": "2c919f2e7e9a340fa03343b931f4403582f56cec5c693ad52d8990abeb13a752",
+    "tags": [
+        "lab01",
+        "eduhub",
+        "ca_nhan"
+    ],
+    "path": "data\\49d3d820-25f4-4446-aeeb-fab0a4f7b3b9.png",
+    "data_url": "file://D:\\CSDLNC_Lab01\\data\\49d3d820-25f4-4446-aeeb-fab0a4f7b3b9.png",
+    "storage_type": "local"
+}
