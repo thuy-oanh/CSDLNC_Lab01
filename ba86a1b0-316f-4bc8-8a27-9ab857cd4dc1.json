@@ -1,0 +1,23 @@
+{
+    "file_id": "ba86a1b0-316f-4bc8-8a27-9ab857cd4dc1",
+    "file_name": "hoc_lieu.jpg",
+    "description": "Anh hai",
+    "caption": "Chu thich hai",
+    "author": "Nguyen Le Thuy Oanh",
+    "size": 326671,
+    "extension": ".jpg",
+    "mime_type": "image/jpeg",
+    "width": 960,
+    "height": 1280,
+    "created_at": "2026-09-24T16:17:15.115378+07:00",
+    "checksum_algorithm": "sha256",
+    "checksum": "a93d306e2fd7b5252a366a658b32c1f9b1e3711927a956bdb7126572c1ba0003",
+    "tags": [
+        "lab01",
+        "eduhub",
+        "ca_nhan"
+    ],
+    "path": "data\\ba86a1b0-316f-4bc8-8a27-9ab857cd4dc1.jpg",
+    "data_url": "file://D:\\CSDLNC_Lab01\\data\\ba86a1b0-316f-4bc8-8a27-9ab857cd4dc1.jpg",
+    "storage_type": "local"
+}
